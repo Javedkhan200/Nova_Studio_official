@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Nova",
+  "patterns": [
+    {
+      "match": "\\b(Nova\\.(show|ask\\.user|os\\.kernel|ai\\.train|web\\.render))\\b",
+      "name": "keyword.control.nova"
+    },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.nova"
+    },
+    {
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+      "name": "variable.other.nova"
+    }
+  ],
+  "scopeName": "source.nova"
+}

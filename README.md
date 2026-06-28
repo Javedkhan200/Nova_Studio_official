@@ -1,3 +1,14 @@
-# Nova Studio Official
-Copyright (c) 2026 Nova Studio. All Rights Reserved.
-Download the latest [Installer](https://github.com/Javedkhan200/Nova_Studio_official/releases/latest/download/nova-extension.vsix) here.
+<div align="center">
+  <h1>🌌 Nova Singularity (NSL)</h1>
+  <p><b>The Ultimate AI Programming Language & Python Killer | Architect: Javed</b></p>
+</div>
+
+Built natively for Termux, OS Kernel development, and AI Integration (Gemini).
+
+### 💻 Code Example
+```nova
+Nova.ask.user("name:" "What is your name?")
+Nova.show(name)
+Nova.ask(gemini)
+Nova.system("init")
+```
