@@ -1,0 +1,9 @@
+{
+  "name": "nova-language",
+  "displayName": "Nova Language Support",
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.50.0" },
+  "contributes": {
+    "languages": [{ "id": "nova", "aliases": ["Nova", "nova"], "extensions": [".nv"] }]
+  }
+}
