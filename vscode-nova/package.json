@@ -1,0 +1,1 @@
+{ "name": "nova-language", "displayName": "Nova Studio", "version": "1.0.0", "engines": { "vscode": "^1.50.0" }, "contributes": { "languages": [{ "id": "nova", "extensions": [".nv"] }] } }
