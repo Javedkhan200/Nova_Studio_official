@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-{ "name": "nova-language", "displayName": "Nova Studio", "version": "1.0.0", "engines": { "vscode": "^1.50.0" }, "contributes": { "languages": [{ "id": "nova", "extensions": [".nv"] }] } }
-=======
 {
-  "name": "nova-language",
-  "displayName": "Nova Language Support",
+  "name": "nova-studio",
+  "displayName": "Nova Studio Official",
   "version": "1.0.0",
+  "publisher": "JavedStudio",
   "engines": { "vscode": "^1.50.0" },
   "contributes": {
     "languages": [{ "id": "nova", "aliases": ["Nova", "nova"], "extensions": [".nv"] }]
   }
 }
->>>>>>> e2069bdc86aad78b24f10dd02499626f619705ef
