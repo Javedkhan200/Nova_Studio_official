@@ -1,0 +1,11 @@
+# Nova Interactive App - Architect: Javed
+# यह ऐप यूजर से सवाल पूछेगा और उसे प्रिंट करेगा
+
+# बोट का नाम सेट करो
+bot_name = NovaBot
+
+# यूजर से इनपुट लो
+Nova.ask.user("user_input:" "Hey Architect! What's on your mind today?")
+
+# अब इसे वापस प्रिंट करो
+Nova.show(user_input)
