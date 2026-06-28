@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://javed-nova.github.io/nova-singularity/sitemap.xml
