@@ -1,0 +1,5 @@
+#!/bin/bash
+# Nova Style Wrapper
+echo -e "\e[1;36mNova 110.0 [Stable Core] Initialized\e[0m"
+echo -e "\e[1;33mType 'exit' to quit.\e[0m"
+~/NovaStudio/nova_bin
