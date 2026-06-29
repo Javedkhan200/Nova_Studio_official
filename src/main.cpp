@@ -10,51 +10,49 @@
 #include <sstream>
 #include <iostream>
 
+/*
+ * Nova Language - AI-Native Scripting Engine
+ * Copyright (c) 2026 Jack (Architect). All rights reserved.
+ */
+
+void print_copyright() {
+    std::cout << "Nova 1.0.4 (default, Jun 29 2026, 13:12:02) [GCC 14.2.1] on Termux/Linux\n";
+    std::cout << "Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n";
+}
+
 int main(int argc, char* argv[]) {
-    // अगर यूजर ने कोई फाइल दी है (e.g., nova app.nv)
     if (argc > 1) {
         std::ifstream file(argv[1]);
         if (file) {
             std::stringstream buffer;
             buffer << file.rdbuf();
             std::string sourceCode = buffer.str();
-            
             Lexer lexer(sourceCode);
             auto tokens = lexer.tokenize();
             Parser parser(tokens);
             auto ast = parser.parse();
             NovaRuntime runtime;
             runtime.evaluate(ast);
-        } else {
-            std::cerr << "[Error] Could not read file: " << argv[1] << "\n";
         }
         return 0;
     }
 
-    // अगर यूजर ने सिर्फ 'nova' टाइप किया है (Interactive Shell)
-    std::cout << "🌌 NovaOS Engine v1.0.1 (Architect Edition)\n";
-    std::cout << "Type 'exit' to close the engine.\n";
-    
-    NovaRuntime runtime; // Runtime एक ही बार शुरू होगा ताकि मेमोरी बनी रहे
-
+    print_copyright();
+    NovaRuntime runtime;
     std::string input;
     while (true) {
-        std::cout << "nova> ";
+        std::cout << ">>> ";
         std::getline(std::cin, input);
         
-        if (input == "exit" || input == "quit") {
-            std::cout << "Shutting down Nova Engine...\n";
-            break;
-        }
+        if (input == "exit" || input == "quit") break;
+        if (input == "copyright") { std::cout << "Copyright (c) 2026 Jack. All Rights Reserved.\n"; continue; }
         if (input.empty()) continue;
 
-        // रियल-टाइम एक्जीक्यूशन
         Lexer lexer(input);
         auto tokens = lexer.tokenize();
         Parser parser(tokens);
         auto ast = parser.parse();
         runtime.evaluate(ast);
     }
-
     return 0;
 }
