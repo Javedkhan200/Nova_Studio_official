@@ -1,0 +1,17 @@
+# NOVA HIGH-LEVEL STANDARD LIBRARY
+
+# AI Integration
+ai_prompt = "Build a chat app"
+Nova.ai.think(ai_prompt)
+
+# App Development
+app_name = "NovaChat"
+Nova.app.render(app_name, 1920, 1080)
+
+# Game Development
+game_title = "NovaCraft"
+Nova.game.init(game_title)
+Nova.game.loop()
+
+# Legacy Bridge
+Nova.bridge.python("server.py")

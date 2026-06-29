@@ -1,27 +1,22 @@
 {
-  "name": "nova-singularity",
-  "displayName": "Nova Singularity Ecosystem",
-  "description": "Official VS Code support for the Nova Language Engine",
+  "name": "nova-language",
+  "displayName": "Nova",
+  "description": "High-Level AI-Native Scripting Language",
   "version": "1.0.0",
-  "publisher": "Jack",
-  "engines": { "vscode": "^1.75.0" },
-  "categories": ["Programming Languages", "Snippets"],
+  "publisher": "ArchitectJaved",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Programming Languages"],
   "contributes": {
     "languages": [{
       "id": "nova",
       "aliases": ["Nova", "nova"],
-      "extensions": [".nv"]
+      "extensions": [".nv", ".nova"],
+      "configuration": "./language-configuration.json"
     }],
-    "commands": [{
-      "command": "nova.run",
-      "title": "Run Nova Script",
-      "icon": "$(play)"
-    }],
-    "menus": {
-      "editor/title/run": [
-        { "command": "nova.run", "when": "resourceExtname == .nv", "group": "navigation" }
-      ]
-    }
-  },
-  "main": "./extension.js"
+    "grammars": [{
+      "language": "nova",
+      "scopeName": "source.nova",
+      "path": "./syntaxes/nova.tmLanguage.json"
+    }]
+  }
 }

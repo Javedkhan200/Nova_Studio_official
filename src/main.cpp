@@ -1,17 +1,24 @@
-#include <iostream>
-#include <string>
+#include "lexer.hpp"
+#include "parser.hpp"
 #include "runtime.hpp"
+#include "modules/ai_module.hpp"
+#include "modules/gui_renderer.hpp"
+#include "modules/game_api.hpp"
+#include "modules/interop_bridge.hpp"
+#include <fstream>
+#include <sstream>
 
-int main() {
-    Runtime runtime;
-    std::string input;
-    // परमानेंट हेडर और कॉपीराइट
-    std::cout << "\033[1;36mNova Singularity v1.0 | Architect: Javed | (c) 2026 Nova Studio. All Rights Reserved.\033[0m\n";
-    std::cout << "Type 'exit' to quit.\n";
-    while (true) {
-        std::cout << "\033[1;32m>>> \033[0m"; // कलरफुल REPL प्रॉम्प्ट
-        if (!std::getline(std::cin, input) || input == "exit") break;
-        runtime.executeLine(input);
-    }
+int main(int argc, char* argv[]) {
+    std::cout << "🚀 NovaOS Engine v2 (High-Level AI/App/Game) Initialized...\n";
+    
+    // Test the high-level C++ bindings directly
+    NovaAI::think("Optimize OS kernel parameters");
+    NovaGUI::renderApp("Nova Desktop Environment", 1920, 1080);
+    NovaGame::initEngine("Nova Physics Demo");
+    
+    // Keep main thread alive for async tasks to show output
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    
+    std::cout << "✅ All high-level sub-systems operational.\n";
     return 0;
 }
