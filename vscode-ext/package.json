@@ -1,6 +1,6 @@
 {
   "name": "nova-language",
-  "displayName": "Nova",
+  "displayName": "Nova", "icon": "icon.png",
   "description": "High-Level AI-Native Scripting Language",
   "version": "1.0.0",
   "publisher": "ArchitectJaved",
