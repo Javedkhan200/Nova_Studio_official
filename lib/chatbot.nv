@@ -1,0 +1,12 @@
+# Nova AI Chatbot - Architect Javed Edition
+
+print("--- Nova AI Chatbot Initialized ---")
+print("Type your prompt and Nova AI will think...")
+
+# यहाँ हम AI मॉड्यूल का इस्तेमाल करेंगे
+ai_prompt = "Hello Nova, who created you?"
+Nova.ai.think(ai_prompt)
+
+# एक सिंपल लूप जो यूजर से इनपुट लेगा
+user_input = "Tell me about OS development"
+Nova.ai.think(user_input)
