@@ -1,0 +1,27 @@
+{
+  "name": "nova-singularity",
+  "displayName": "Nova Singularity Ecosystem",
+  "description": "Official VS Code support for the Nova Language Engine",
+  "version": "1.0.0",
+  "publisher": "Jack",
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Programming Languages", "Snippets"],
+  "contributes": {
+    "languages": [{
+      "id": "nova",
+      "aliases": ["Nova", "nova"],
+      "extensions": [".nv"]
+    }],
+    "commands": [{
+      "command": "nova.run",
+      "title": "Run Nova Script",
+      "icon": "$(play)"
+    }],
+    "menus": {
+      "editor/title/run": [
+        { "command": "nova.run", "when": "resourceExtname == .nv", "group": "navigation" }
+      ]
+    }
+  },
+  "main": "./extension.js"
+}
