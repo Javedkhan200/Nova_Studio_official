@@ -3,30 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaOS | Architect Javed</title>
+    <title>NovaStudio | Universal Computing</title>
     <style>
-        body { background-color: #050505; color: #00ff00; font-family: 'Courier New', Courier, monospace; text-align: center; margin-top: 10%; }
-        h1 { font-size: 4em; text-shadow: 0 0 10px #00ff00; margin-bottom: 0; }
-        p { font-size: 1.2em; color: #a3a3a3; }
-        .box { background: #111; padding: 20px; border: 1px solid #00ff00; display: inline-block; margin-top: 20px; text-align: left; box-shadow: 0 0 15px #00ff0033; }
-        .code { color: #fff; font-weight: bold; }
-        .footer { margin-top: 50px; font-size: 0.9em; opacity: 0.7; }
+        :root { --bg: #09090b; --card-bg: #111116; --text: #ffffff; --text-muted: #888891; --blue: #0066ff; --green: #22c55e; --red: #ef4444; }
+        body { background-color: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        header { width: 100%; max-width: 1200px; padding: 20px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
+        .logo { font-size: 1.2em; font-weight: bold; }
+        .logo span { color: var(--blue); }
+        .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 0.9em; }
+        .nav-links .signup { border: 1px solid var(--text-muted); padding: 5px 15px; border-radius: 20px; color: var(--text); }
+        .hero { text-align: center; max-width: 800px; padding: 60px 20px; }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; line-height: 1.1; }
+        .hero p { color: var(--text-muted); font-size: 1.1em; line-height: 1.5; }
+        
+        .pricing-container { display: flex; flex-direction: column; gap: 30px; width: 100%; max-width: 500px; padding: 20px; box-sizing: border-box; }
+        .card { background-color: var(--card-bg); border-radius: 20px; padding: 40px; border: 1px solid #222; }
+        .card h2 { margin-top: 0; font-size: 2em; }
+        .card p { color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px; }
+        .features { list-style: none; padding: 0; margin-bottom: 30px; }
+        .features li { font-size: 0.9em; margin-bottom: 15px; display: flex; align-items: center; }
+        .features li::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 15px; }
+        .features li.active::before { background-color: var(--green); }
+        .features li.inactive { color: var(--text-muted); }
+        .features li.inactive::before { background-color: var(--red); }
+        
+        .arch-selector { margin-bottom: 30px; }
+        .arch-title { font-size: 0.7em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
+        .arch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .arch-btn { background: #1a1a24; border: 1px solid #333; color: var(--text); padding: 10px; border-radius: 8px; font-size: 0.8em; cursor: pointer; transition: 0.3s; }
+        .arch-btn:hover, .arch-btn.selected { background: #2a2a35; border-color: var(--blue); }
+        
+        .price { font-size: 2.5em; font-weight: bold; margin-bottom: 20px; display: flex; align-items: baseline; }
+        .price span { font-size: 0.3em; color: var(--text-muted); font-weight: normal; margin-left: 5px; }
+        
+        .btn-primary { width: 100%; padding: 15px; border-radius: 10px; border: none; font-weight: bold; font-size: 1em; cursor: pointer; }
+        .btn-white { background-color: var(--text); color: var(--bg); }
+        .btn-blue { background-color: var(--blue); color: var(--text); }
     </style>
 </head>
 <body>
-    <h1>NovaOS Engine</h1>
-    <p>The Ultimate AI-Native, High-Level Scripting Language.</p>
-    
-    <div class="box">
-        <p><b>Linux / Termux Install:</b></p>
-        <p class="code">bash <(curl -sSL https://raw.githubusercontent.com/Javedkhan200/NovaStudio/main/deploy/setup.sh)</p>
+    <header>
+        <div class="logo">Nova<span>Studio</span></div>
+        <div class="nav-links">
+            <a href="#">Ecosystem</a>
+            <a href="#" class="signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>The Multi-Platform Universal Computing Language.</h1>
+        <p>One-click graphical installers designed to build apps natively across Windows, Linux, Arch, Mac, and Android APK structures.</p>
     </div>
-    <br>
-    <div class="box">
-        <p><b>Windows PowerShell Install:</b></p>
-        <p class="code">iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Javedkhan200/NovaStudio/main/deploy/setup.ps1'))</p>
+
+    <div class="pricing-container">
+        <div class="card">
+            <h2>Nova Core</h2>
+            <p>Standard graphical runtime package with limited syntax modules for system validation.</p>
+            <ul class="features">
+                <li class="active">In-built VS Code Direct Extension Connector</li>
+                <li class="active">Native Single-Click Graphical Launcher</li>
+                <li class="inactive">Locked: Complete All-Language Polyglot Architecture</li>
+                <li class="inactive">Locked: Advanced Mobile Android Native Terminal IDE</li>
+            </ul>
+            <div class="arch-selector">
+                <span class="arch-title">Select Target Architecture:</span>
+                <div class="arch-grid">
+                    <button class="arch-btn selected">.exe (Win)</button>
+                    <button class="arch-btn">.deb (Linux)</button>
+                    <button class="arch-btn">.zst (Arch)</button>
+                    <button class="arch-btn">.dmg (Mac)</button>
+                    <button class="arch-btn">.apk (Android)</button>
+                    <button class="arch-btn">.nova (Format)</button>
+                </div>
+            </div>
+            <h2 style="margin-bottom: 20px;">Free</h2>
+            <button class="btn-primary btn-white" onclick="window.location.href='https://github.com/Javedkhan200/NovaStudio/releases/latest'">Download Core Setup</button>
+        </div>
+
+        <div class="card">
+            <h2>Nova Pro</h2>
+            <p>The complete omnidirectional computing engine hosting all native libraries and compilers ever made.</p>
+            <ul class="features">
+                <li class="active">Unleashed: Complete All-Language Polyglot Architecture (Python, C++, JS, Rust...)</li>
+                <li class="active">Unleashed: Full Android Native IDE & App Terminal Shell</li>
+                <li class="active">Unleashed: One-Click Mac, Windows, Linux Graphical Installer</li>
+                <li class="active">Unleashed: VS Code Code-Runner Hotkey Integration Module</li>
+            </ul>
+            <div class="arch-selector">
+                <span class="arch-title">Select Target Architecture:</span>
+                <div class="arch-grid">
+                    <button class="arch-btn">.exe (Win)</button>
+                    <button class="arch-btn selected">.deb (Linux)</button>
+                    <button class="arch-btn">.zst (Arch)</button>
+                    <button class="arch-btn">.dmg (Mac)</button>
+                    <button class="arch-btn">.apk (Android)</button>
+                    <button class="arch-btn">.nova (Format)</button>
+                </div>
+            </div>
+            <div class="price">₹750<span>/ one-time</span></div>
+            <button class="btn-primary btn-blue" onclick="alert('Payment Gateway integrating soon! Send UPI ID to the Architect.')">Purchase Pro Setup</button>
+        </div>
     </div>
-    
-    <div class="footer">Built from scratch by Master Architect Javed.</div>
 </body>
 </html>
